@@ -44,6 +44,8 @@ public class MainApp {
 
         ctx.register(HelloWorldConfig.class);
         ctx.register(ContextEvent.class);
+        ctx.register(CustomEventPublisher.class);
+        ctx.register(CustomEventHandler.class);
         ctx.refresh();
         ctx.start();
 
@@ -53,6 +55,10 @@ public class MainApp {
 
         LittleHelper helper = ctx.getBean(LittleHelper.class);
         helper.sayHello();
+
+        CustomEventPublisher cvp = (CustomEventPublisher) ctx.getBean(CustomEventPublisher.class);
+
+        cvp.call();
 
         System.out.println();
 

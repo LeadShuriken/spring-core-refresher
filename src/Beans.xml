@@ -18,6 +18,9 @@
     <!-- <bean id = "cRexEventHandler" class = "com.tutorialspoint.ContextEvent"/> -->
     <bean id = "cCloseEventHandler" class = "com.tutorialspoint.ContextEvent"/>
 
+    <!-- <bean id = "customEventHandler" class = "com.tutorialspoint.CustomEventHandler"/>
+    <bean id = "customEventPublisher" class = "com.tutorialspoint.CustomEventPublisher"/> -->
+
     <bean id = "beanTeamplate" abstract = "true">
         <property name = "message1" value = "Hello World!"/>
         <property name = "message2" value = "Hello Second World!"/>
