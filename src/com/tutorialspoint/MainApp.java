@@ -1,7 +1,6 @@
 package com.tutorialspoint;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.List;
 
@@ -23,7 +22,9 @@ public class MainApp {
 
         AbstractApplicationContext factory = new ClassPathXmlApplicationContext("Beans.xml");
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST", "root", "")) {
+        HelloWorldDAO helloWorldJDBCTemplate = (HelloWorldDAO) factory.getBean("helloWorldJDBCTemplate");
+
+        try (Connection conn = helloWorldJDBCTemplate.getDataSource().getConnection()) {
             execute(conn, "DROP TABLE IF EXISTS HelloWorld");
 
             execute(conn,
@@ -35,8 +36,6 @@ public class MainApp {
                     "CREATE PROCEDURE getRecord (\n" + "IN in_id INTEGER,\n" + " OUT out_message1 VARCHAR(20))\n"
                             + "BEGIN\n" + " SELECT message1\n" + " INTO out_message1\n"
                             + " FROM HelloWorld where id = in_id;\n" + " END\n");
-
-            HelloWorldDAO helloWorldJDBCTemplate = (HelloWorldDAO) factory.getBean("helloWorldJDBCTemplate");
 
             System.out.println("------Records Creation--------");
             helloWorldJDBCTemplate.createCodeTrans("A", "B");
@@ -60,71 +59,69 @@ public class MainApp {
         }
 
         // -------------------
-        // factory.start();
-        // System.out.println();
+        factory.start();
+        System.out.println();
 
-        // HelloWorld objA = (HelloWorld) factory.getBean("helloWorld");
-        // objA.getMessage1();
-        // objA.getMessage2();
-        // try {
-        // objA.printThrowException();
-        // } catch (Exception e) {
-        // System.out.println();
-        // }
+        HelloWorld objA = (HelloWorld) factory.getBean("helloWorld");
+        objA.getMessage1();
+        objA.getMessage2();
+        try {
+            objA.printThrowException();
+        } catch (Exception e) {
+            System.out.println();
+        }
 
-        // //
-        // HelloIndia objB = (HelloIndia) factory.getBean("helloIndia");
-        // objB.getMessage1();
-        // objB.getMessage2();
-        // objB.getMessage3();
-        // System.out.println();
+        //
+        HelloIndia objB = (HelloIndia) factory.getBean("helloIndia");
+        objB.getMessage1();
+        objB.getMessage2();
+        objB.getMessage3();
+        System.out.println();
 
-        // TextEditor te = (TextEditor) factory.getBean("textEditor");
-        // te.spellCheck();
+        TextEditor te = (TextEditor) factory.getBean("textEditor");
+        te.spellCheck();
 
-        // System.out.println();
-        // JavaCollection jc = (JavaCollection) factory.getBean("javaCollection");
+        System.out.println();
+        JavaCollection jc = (JavaCollection) factory.getBean("javaCollection");
 
-        // jc.getAddressList();
-        // jc.getAddressSet();
-        // jc.getAddressMap();
+        jc.getAddressList();
+        jc.getAddressSet();
+        jc.getAddressMap();
 
-        // jc.getAddressListBean();
-        // jc.getAddressSetBean();
-        // jc.getAddressMapBean();
+        jc.getAddressListBean();
+        jc.getAddressSetBean();
+        jc.getAddressMapBean();
 
-        // jc.getAddressProp();
+        jc.getAddressProp();
 
-        // System.out.println();
+        System.out.println();
 
-        // AnnotationConfigApplicationContext ctx = new
-        // AnnotationConfigApplicationContext();
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 
-        // ctx.register(HelloWorldConfig.class);
-        // ctx.register(ContextEvent.class);
-        // ctx.register(CustomEventPublisher.class);
-        // ctx.register(CustomEventHandler.class);
-        // ctx.refresh();
-        // ctx.start();
+        ctx.register(HelloWorldConfig.class);
+        ctx.register(ContextEvent.class);
+        ctx.register(CustomEventPublisher.class);
+        ctx.register(CustomEventHandler.class);
+        ctx.refresh();
+        ctx.start();
 
-        // HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
-        // helloWorld.setMessage1("Hello World From Java Config!");
-        // helloWorld.getMessage1();
+        HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
+        helloWorld.setMessage1("Hello World From Java Config!");
+        helloWorld.getMessage1();
 
-        // LittleHelper helper = ctx.getBean(LittleHelper.class);
-        // helper.sayHello();
+        LittleHelper helper = ctx.getBean(LittleHelper.class);
+        helper.sayHello();
 
-        // CustomEventPublisher cvp = (CustomEventPublisher)
-        // ctx.getBean(CustomEventPublisher.class);
+        CustomEventPublisher cvp = (CustomEventPublisher) ctx.getBean(CustomEventPublisher.class);
 
-        // cvp.call();
+        cvp.call();
 
-        // System.out.println();
+        System.out.println();
 
-        // factory.stop();
-        // factory.registerShutdownHook();
-        // ctx.stop();
-        // ctx.registerShutdownHook();
-        // // -------------------
+        factory.stop();
+        factory.registerShutdownHook();
+        ctx.stop();
+        ctx.registerShutdownHook();
+        // -------------------
     }
 }

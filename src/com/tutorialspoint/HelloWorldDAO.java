@@ -4,6 +4,9 @@ import java.util.List;
 import javax.sql.DataSource;
 
 public interface HelloWorldDAO {
+
+    public DataSource getDataSource();
+
     /**
      * This is the method to be used to initialize database resources ie.
      * connection.

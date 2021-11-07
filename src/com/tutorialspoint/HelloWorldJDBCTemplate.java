@@ -21,6 +21,10 @@ public class HelloWorldJDBCTemplate implements HelloWorldDAO {
     private SimpleJdbcCall jdbcCall;
     private PlatformTransactionManager transactionManager;
 
+    public DataSource getDataSource() {
+        return dataSource;
+    }
+
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         this.jdbcCall = new SimpleJdbcCall(dataSource).withProcedureName("getRecord");
@@ -32,8 +36,8 @@ public class HelloWorldJDBCTemplate implements HelloWorldDAO {
     }
 
     public void createCodeTrans(String message1, String message2) {
-        // TransactionDefinition def = new DefaultTransactionDefinition();
-        // TransactionStatus status = transactionManager.getTransaction(def);
+        TransactionDefinition def = new DefaultTransactionDefinition();
+        TransactionStatus status = transactionManager.getTransaction(def);
 
         try {
             String SQL = "insert into HelloWorld (message1, message2) values (?, ?)";
@@ -42,10 +46,9 @@ public class HelloWorldJDBCTemplate implements HelloWorldDAO {
             System.out.println("Created Record Message1 = " + message1 + " Message2 = " + message2);
         } catch (DataAccessException e) {
             System.out.println("Error in creating record, rolling back");
-            // transactionManager.rollback(status);
+            transactionManager.rollback(status);
             throw e;
         }
-        return;
     }
 
     public void createDeclTrans(String message1, String message2) {
