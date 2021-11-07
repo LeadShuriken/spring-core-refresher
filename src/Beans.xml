@@ -3,15 +3,34 @@
 <beans xmlns = "http://www.springframework.org/schema/beans"
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xmlns:context = "http://www.springframework.org/schema/context"
+   xmlns:aop = "http://www.springframework.org/schema/aop"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
    http://www.springframework.org/schema/context
-   http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+   http://www.springframework.org/schema/aop 
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
    default-lazy-init = "true">
     <!-- default-init-method = "init" 
    default-destroy-method = "destroy"  -->
 
     <context:annotation-config/>
+    <!-- <aop:aspectj-autoproxy/> -->
+
+    <!-- Initialization for data source -->
+    <bean id="dataSource" 
+      class = "org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name = "driverClassName" value = "com.mysql.jdbc.Driver"/>
+        <property name = "url" value = "jdbc:mysql://localhost:3306/TEST"/>
+        <property name = "username" value = "root"/>
+        <property name = "password" value = ""/>
+    </bean>
+
+    <!-- Definition for HelloWorldJDBCTemplate bean -->
+    <bean id = "helloWorldJDBCTemplate" 
+      class = "com.tutorialspoint.HelloWorldJDBCTemplate">
+        <property name = "dataSource" ref = "dataSource" />
+    </bean>
 
     <!-- <bean id = "cStartEventHandler" class = "com.tutorialspoint.ContextEvent"/> -->
     <!-- <bean id = "cStopEventHandler" class = "com.tutorialspoint.ContextEvent"/> -->
@@ -32,7 +51,6 @@
         <property name = "message1" value = "Hello India!"/>
         <property name = "message3" value = "Namaste India!"/>
     </bean>
-
 
     <bean id = "spellChecker" class = "com.tutorialspoint.SpellChecker">
         <property name = "checkerName" value = "Spell Checker 1"/>
@@ -118,6 +136,22 @@
         </property>
     </bean>
 
+    <aop:config>
+        <aop:aspect id = "log" ref = "logging">
+            <aop:pointcut id = "selectAll" 
+            expression = "execution(* com.tutorialspoint.HelloWorld.*(..))"/>
+
+            <aop:before pointcut-ref = "selectAll" method = "beforeAdvice"/>
+            <aop:after pointcut-ref = "selectAll" method = "afterAdvice"/>
+            <aop:after-returning pointcut-ref = "selectAll" 
+            returning = "retVal" method = "afterReturningAdvice"/>
+
+            <aop:after-throwing pointcut-ref = "selectAll" 
+            throwing = "ex" method = "AfterThrowingAdvice"/>
+        </aop:aspect>
+    </aop:config>
+
+    <bean id = "logging" class = "com.tutorialspoint.Logging"/>
     <bean class = "com.tutorialspoint.InitHelloWorld" />
 
 </beans>

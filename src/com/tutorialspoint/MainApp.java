@@ -1,12 +1,54 @@
 package com.tutorialspoint;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.List;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
     public static void main(String[] args) {
+
         AbstractApplicationContext factory = new ClassPathXmlApplicationContext("Beans.xml");
+
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/TEST", "root", "")) {
+
+            conn.createStatement().execute(
+                    "CREATE TABLE HelloWorld(ID INT NOT NULL AUTO_INCREMENT, MESSAGE1 VARCHAR(20), MESSAGE2 VARCHAR(20), PRIMARY KEY (ID))");
+            conn.createStatement().execute("DROP PROCEDURE IF EXISTS getRecord");
+            conn.createStatement()
+                    .execute("CREATE PROCEDURE getRecord (\n" + "IN in_id INTEGER,\n"
+                            + " OUT out_message1 VARCHAR(20))\n" + "BEGIN\n" + " SELECT message1\n"
+                            + " INTO out_message1\n" + " FROM HelloWorld where id = in_id;\n" + " END\n");
+
+            HelloWorldJDBCTemplate helloWorldJDBCTemplate = (HelloWorldJDBCTemplate) factory
+                    .getBean("helloWorldJDBCTemplate");
+
+            System.out.println("------Records Creation--------");
+            helloWorldJDBCTemplate.create("A", "B");
+            helloWorldJDBCTemplate.create("C", "D");
+            helloWorldJDBCTemplate.create("E", "F");
+
+            System.out.println("------Listing Multiple Records--------");
+            List<HelloWorld> worlds = helloWorldJDBCTemplate.listHelloWorlds();
+
+            for (HelloWorld record : worlds) {
+                System.out.println(record);
+            }
+
+            System.out.println("----Updating Record with ID = 2 -----");
+            helloWorldJDBCTemplate.update(2, "CHANGED");
+
+            System.out.println("----Listing Record with ID = 2 -----");
+            System.out.println(helloWorldJDBCTemplate.getHelloWorld(2));
+
+            conn.createStatement().execute("DROP TABLE HelloWorld");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            // TODO: handle exception
+        }
 
         // -------------------
         factory.start();
@@ -15,7 +57,13 @@ public class MainApp {
         HelloWorld objA = (HelloWorld) factory.getBean("helloWorld");
         objA.getMessage1();
         objA.getMessage2();
-        System.out.println();
+        try {
+            objA.printThrowException();
+        } catch (Exception e) {
+            System.out.println();
+        }
+
+        //
         HelloIndia objB = (HelloIndia) factory.getBean("helloIndia");
         objB.getMessage1();
         objB.getMessage2();
