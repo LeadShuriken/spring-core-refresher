@@ -11,9 +11,16 @@ public interface HelloWorldDAO {
     public void setDataSource(DataSource ds);
 
     /**
-     * This is the method to be used to create a record in the HelloWorld table.
+     * This is the method to be used to createCodeTrans a record in the HelloWorld
+     * table.
      */
-    public void create(String message1, String message2);
+    public void createCodeTrans(String message1, String message2);
+
+    /**
+     * This is the method to be used to createDeclTrans a record in the HelloWorld
+     * table.
+     */
+    public void createDeclTrans(String message1, String message2);
 
     /**
      * This is the method to be used to list down a record from the HelloWorld table
