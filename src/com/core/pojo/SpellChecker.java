@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.core.pojo;
 
 public class SpellChecker {
 

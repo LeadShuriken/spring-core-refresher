@@ -1,4 +1,6 @@
-package com.tutorialspoint;
+package com.core;
+
+import com.core.pojo.LittleHelper;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,7 +1,10 @@
-package com.tutorialspoint;
+package com.core.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import com.core.pojo.HelloWorld;
+
 import org.springframework.jdbc.core.RowMapper;
 
 public class HelloWorldMapper implements RowMapper<HelloWorld> {

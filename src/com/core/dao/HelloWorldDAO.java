@@ -1,7 +1,9 @@
-package com.tutorialspoint;
+package com.core.dao;
 
 import java.util.List;
 import javax.sql.DataSource;
+
+import com.core.pojo.HelloWorld;
 
 public interface HelloWorldDAO {
 

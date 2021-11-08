@@ -1,0 +1,420 @@
+Adding [systemProperties] PropertySource with lowest search precedence
+Adding [systemEnvironment] PropertySource with lowest search precedence
+Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7403c468: startup date [Mon Nov 08 13:35:50 CET 2021]; root of context hierarchy
+Adding [systemProperties] PropertySource with lowest search precedence
+Adding [systemEnvironment] PropertySource with lowest search precedence
+Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+Loading XML bean definitions from class path resource [Beans.xml]
+Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+Loading schema mappings from [META-INF/spring.schemas]
+Loaded schema mappings: {http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd=org/springframework/web/socket/config/spring-websocket-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-4.1.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-4.1.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/context/spring-context-4.1.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-4.1.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-4.1.xsd=org/springframework/aop/config/spring-aop-4.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms.xsd=org/springframework/jms/config/spring-jms-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.1.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/jms/spring-jms-4.1.xsd=org/springframework/jms/config/spring-jms-4.1.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd=org/springframework/oxm/config/spring-oxm-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/jms/spring-jms-2.5.xsd=org/springframework/jms/config/spring-jms-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/jms/spring-jms-3.1.xsd=org/springframework/jms/config/spring-jms-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-4.1.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/websocket/spring-websocket-4.1.xsd=org/springframework/web/socket/config/spring-websocket-4.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/websocket/spring-websocket.xsd=org/springframework/web/socket/config/spring-websocket-4.1.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms-3.0.xsd=org/springframework/jms/config/spring-jms-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/util/spring-util-4.1.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd=org/springframework/jdbc/config/spring-jdbc-4.1.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.1.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/task/spring-task-4.1.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd=org/springframework/web/servlet/config/spring-mvc-4.1.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jms/spring-jms-3.2.xsd=org/springframework/jms/config/spring-jms-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/jms/spring-jms-4.0.xsd=org/springframework/jms/config/spring-jms-4.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-4.0.xsd=org/springframework/oxm/config/spring-oxm-4.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-4.1.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd}
+Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+Found XML schema [http://www.springframework.org/schema/context/spring-context-3.0.xsd] in classpath: org/springframework/context/config/spring-context-3.0.xsd
+Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.0.xsd
+Found XML schema [http://www.springframework.org/schema/aop/spring-aop-3.0.xsd] in classpath: org/springframework/aop/config/spring-aop-3.0.xsd
+Found XML schema [http://www.springframework.org/schema/tx/spring-tx-3.0.xsd] in classpath: org/springframework/transaction/config/spring-tx-3.0.xsd
+Loading bean definitions
+Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/websocket=org.springframework.web.socket.config.WebSocketNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/jms=org.springframework.jms.config.JmsNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler}
+Loaded 25 bean definitions from location pattern [Beans.xml]
+Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@7403c468: org.springframework.beans.factory.support.DefaultListableBeanFactory@f09733f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,helloWorldJDBCTemplate,dataSource,transactionManager,txAdvice,worldDaoOpp,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#1,org.springframework.aop.aspectj.AspectJPointcutAdvisor#2,org.springframework.aop.aspectj.AspectJPointcutAdvisor#3,selectAll,cCloseEventHandler,beanTeamplate,helloWorld,helloIndia,spellChecker,spellChecker2,textEditor,javaCollection,logging]; root of factory hierarchy
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Successfully enhanced com.core.ContextEvent; enhanced class name is: com.core.ContextEvent$$EnhancerBySpringCGLIB$$57d42a8d
+Replacing bean definition 'cCloseEventHandler' existing class name 'com.core.ContextEvent' with enhanced class name 'com.core.ContextEvent$$EnhancerBySpringCGLIB$$57d42a8d'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@3b96c42e]
+Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@4f0100a7]
+Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f09733f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,helloWorldJDBCTemplate,dataSource,transactionManager,txAdvice,worldDaoOpp,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#1,org.springframework.aop.aspectj.AspectJPointcutAdvisor#2,org.springframework.aop.aspectj.AspectJPointcutAdvisor#3,selectAll,cCloseEventHandler,beanTeamplate,helloWorld,helloIndia,spellChecker,spellChecker2,textEditor,javaCollection,logging,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor]; root of factory hierarchy
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+Creating shared instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Eagerly caching bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' to allow for resolving potential circular references
+Creating instance of bean 'worldDaoOpp'
+Finished creating instance of bean 'worldDaoOpp'
+Finished creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Creating instance of bean '(inner bean)#52c3cb31'
+Creating instance of bean '(inner bean)#6d025197'
+Finished creating instance of bean '(inner bean)#6d025197'
+Creating instance of bean 'selectAll'
+Finished creating instance of bean 'selectAll'
+Creating instance of bean '(inner bean)#73194df'
+Finished creating instance of bean '(inner bean)#73194df'
+Finished creating instance of bean '(inner bean)#52c3cb31'
+Eagerly caching bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Creating instance of bean '(inner bean)#5e01a982'
+Creating instance of bean '(inner bean)#23d1e5d0'
+Finished creating instance of bean '(inner bean)#23d1e5d0'
+Creating instance of bean 'selectAll'
+Finished creating instance of bean 'selectAll'
+Creating instance of bean '(inner bean)#704f1591'
+Finished creating instance of bean '(inner bean)#704f1591'
+Finished creating instance of bean '(inner bean)#5e01a982'
+Eagerly caching bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Creating instance of bean '(inner bean)#6955cb39'
+Creating instance of bean '(inner bean)#5f7b97da'
+Finished creating instance of bean '(inner bean)#5f7b97da'
+Creating instance of bean 'selectAll'
+Finished creating instance of bean 'selectAll'
+Creating instance of bean '(inner bean)#18b0930f'
+Finished creating instance of bean '(inner bean)#18b0930f'
+Finished creating instance of bean '(inner bean)#6955cb39'
+Eagerly caching bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Creating instance of bean '(inner bean)#18c5069b'
+Creating instance of bean '(inner bean)#68ad99fe'
+Finished creating instance of bean '(inner bean)#68ad99fe'
+Creating instance of bean 'selectAll'
+Finished creating instance of bean 'selectAll'
+Creating instance of bean '(inner bean)#485e36bc'
+Finished creating instance of bean '(inner bean)#485e36bc'
+Finished creating instance of bean '(inner bean)#18c5069b'
+Eagerly caching bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@3f390d63]
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Creating shared instance of singleton bean 'helloWorld'
+Creating instance of bean 'helloWorld'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Found AspectJ method: public void com.core.Logging.beforeAdvice()
+Found AspectJ method: public void com.core.Logging.afterAdvice()
+Found AspectJ method: public void com.core.Logging.afterReturningAdvice(java.lang.Object)
+Found AspectJ method: public void com.core.Logging.AfterThrowingAdvice(java.lang.IllegalArgumentException)
+Eagerly caching bean 'helloWorld' to allow for resolving potential circular references
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Creating implicit proxy for bean 'helloWorld' with 0 common interceptors and 9 specific interceptors
+Creating CGLIB proxy: target source is SingletonTargetSource for target object [com.core.HelloWorld@dcfda20]
+Unable to apply any optimisations to advised method: public void com.core.HelloWorld.setId(java.lang.Integer)
+Unable to apply any optimisations to advised method: public java.lang.String com.core.HelloWorld.getMessage1()
+Unable to apply any optimisations to advised method: public java.lang.String com.core.HelloWorld.getMessage2()
+Unable to apply any optimisations to advised method: public void com.core.HelloWorld.printThrowException()
+Unable to apply any optimisations to advised method: public void com.core.HelloWorld.setMessage1(java.lang.String)
+Unable to apply any optimisations to advised method: public void com.core.HelloWorld.setMessage2(java.lang.String)
+Unable to apply any optimisations to advised method: public java.lang.String com.core.HelloWorld.toString()
+Unable to apply any optimisations to advised method: public void com.core.HelloWorld.init()
+Unable to apply any optimisations to advised method: public java.lang.Integer com.core.HelloWorld.getId()
+Unable to apply any optimisations to advised method: public void com.core.HelloWorld.cleanup()
+Found finalize() method - using NO_OVERRIDE
+Found 'equals' method: public boolean java.lang.Object.equals(java.lang.Object)
+Found 'hashCode' method: public native int java.lang.Object.hashCode()
+Unable to apply any optimisations to advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+Finished creating instance of bean 'helloWorld'
+Creating shared instance of singleton bean 'logging'
+Creating instance of bean 'logging'
+Eagerly caching bean 'logging' to allow for resolving potential circular references
+Finished creating instance of bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Creating shared instance of singleton bean 'helloIndia'
+Creating instance of bean 'helloIndia'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Found init method on class [com.core.HelloIndia]: public void com.core.HelloIndia.init()
+Found destroy method on class [com.core.HelloIndia]: public void com.core.HelloIndia.destroy()
+Registered init method on class [com.core.HelloIndia]: org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement@316510
+Registered destroy method on class [com.core.HelloIndia]: org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement@5cd39ffa
+Eagerly caching bean 'helloIndia' to allow for resolving potential circular references
+Invoking init method on bean 'helloIndia': public void com.core.HelloIndia.init()
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Finished creating instance of bean 'helloIndia'
+Creating shared instance of singleton bean 'textEditor'
+Creating instance of bean 'textEditor'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Registered injected element on class [com.core.TextEditor]: ResourceElement for public void com.core.TextEditor.setSpellChecker(com.core.SpellChecker)
+Eagerly caching bean 'textEditor' to allow for resolving potential circular references
+Processing injected element of bean 'textEditor': ResourceElement for public void com.core.TextEditor.setSpellChecker(com.core.SpellChecker)
+Creating shared instance of singleton bean 'spellChecker'
+Creating instance of bean 'spellChecker'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Eagerly caching bean 'spellChecker' to allow for resolving potential circular references
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Finished creating instance of bean 'spellChecker'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Finished creating instance of bean 'textEditor'
+Creating shared instance of singleton bean 'javaCollection'
+Creating instance of bean 'javaCollection'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Eagerly caching bean 'javaCollection' to allow for resolving potential circular references
+Returning cached instance of singleton bean 'helloWorld'
+Returning cached instance of singleton bean 'helloWorld'
+Returning cached instance of singleton bean 'helloWorld'
+Returning cached instance of singleton bean 'helloWorld'
+Returning cached instance of singleton bean 'helloWorld'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Finished creating instance of bean 'javaCollection'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Returning cached instance of singleton bean 'logging'
+Adding [systemProperties] PropertySource with lowest search precedence
+Adding [systemEnvironment] PropertySource with lowest search precedence
+Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4bf3798b: startup date [Mon Nov 08 13:35:52 CET 2021]; root of context hierarchy
+Bean factory for org.springframework.context.annotation.AnnotationConfigApplicationContext@4bf3798b: org.springframework.beans.factory.support.DefaultListableBeanFactory@132ddbab: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloWorldConfig,contextEvent,customEventPublisher,customEventHandler]; root of factory hierarchy
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Registered bean definition for imported @Configuration class com.core.LittleHelperConfig
+Registering bean definition for @Bean method com.core.LittleHelperConfig.a()
+Registering bean definition for @Bean method com.core.HelloWorldConfig.helloWorld()
+Successfully enhanced com.core.ContextEvent; enhanced class name is: com.core.ContextEvent$$EnhancerBySpringCGLIB$$57d42a8d
+Replacing bean definition 'contextEvent' existing class name 'com.core.ContextEvent' with enhanced class name 'com.core.ContextEvent$$EnhancerBySpringCGLIB$$57d42a8d'
+Successfully enhanced com.core.LittleHelperConfig; enhanced class name is: com.core.LittleHelperConfig$$EnhancerBySpringCGLIB$$7baaf288
+Replacing bean definition 'com.core.LittleHelperConfig' existing class name 'com.core.LittleHelperConfig' with enhanced class name 'com.core.LittleHelperConfig$$EnhancerBySpringCGLIB$$7baaf288'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@7e242b4d]
+Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@305f031]
+Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@132ddbab: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloWorldConfig,contextEvent,customEventPublisher,customEventHandler,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,com.core.LittleHelperConfig,a,helloWorld]; root of factory hierarchy
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+Creating shared instance of singleton bean 'helloWorldConfig'
+Creating instance of bean 'helloWorldConfig'
+Eagerly caching bean 'helloWorldConfig' to allow for resolving potential circular references
+Finished creating instance of bean 'helloWorldConfig'
+Creating shared instance of singleton bean 'contextEvent'
+Creating instance of bean 'contextEvent'
+Eagerly caching bean 'contextEvent' to allow for resolving potential circular references
+Finished creating instance of bean 'contextEvent'
+Creating shared instance of singleton bean 'customEventPublisher'
+Creating instance of bean 'customEventPublisher'
+Eagerly caching bean 'customEventPublisher' to allow for resolving potential circular references
+Finished creating instance of bean 'customEventPublisher'
+Creating shared instance of singleton bean 'customEventHandler'
+Creating instance of bean 'customEventHandler'
+Eagerly caching bean 'customEventHandler' to allow for resolving potential circular references
+Finished creating instance of bean 'customEventHandler'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+Creating shared instance of singleton bean 'com.core.LittleHelperConfig'
+Creating instance of bean 'com.core.LittleHelperConfig'
+Eagerly caching bean 'com.core.LittleHelperConfig' to allow for resolving potential circular references
+Finished creating instance of bean 'com.core.LittleHelperConfig'
+Creating shared instance of singleton bean 'helloWorld'
+Creating instance of bean 'helloWorld'
+Returning cached instance of singleton bean 'helloWorldConfig'
+Eagerly caching bean 'helloWorld' to allow for resolving potential circular references
+Invoking init method  'init' on bean with name 'helloWorld'
+Finished creating instance of bean 'helloWorld'
+Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@757d6814]
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Returning cached instance of singleton bean 'helloWorld'
+Creating instance of bean 'a'
+Returning cached instance of singleton bean 'com.core.LittleHelperConfig'
+Finished creating instance of bean 'a'
+Returning cached instance of singleton bean 'customEventPublisher'
+Returning cached instance of singleton bean 'customEventHandler'
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Closing org.springframework.context.support.ClassPathXmlApplicationContext@7403c468: startup date [Mon Nov 08 13:35:50 CET 2021]; root of context hierarchy
+Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4bf3798b: startup date [Mon Nov 08 13:35:52 CET 2021]; root of context hierarchy
+Creating shared instance of singleton bean 'cCloseEventHandler'
+Creating instance of bean 'cCloseEventHandler'
+Returning cached instance of singleton bean 'contextEvent'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@132ddbab: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,helloWorldConfig,contextEvent,customEventPublisher,customEventHandler,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,com.core.LittleHelperConfig,a,helloWorld]; root of factory hierarchy
+Invoking destroy method 'cleanup' on bean with name 'helloWorld'
+Eagerly caching bean 'cCloseEventHandler' to allow for resolving potential circular references
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#3'
+Finished creating instance of bean 'cCloseEventHandler'
+Returning cached instance of singleton bean 'lifecycleProcessor'
+Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f09733f: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,helloWorldJDBCTemplate,dataSource,transactionManager,txAdvice,worldDaoOpp,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#1,org.springframework.aop.aspectj.AspectJPointcutAdvisor#2,org.springframework.aop.aspectj.AspectJPointcutAdvisor#3,selectAll,cCloseEventHandler,beanTeamplate,helloWorld,helloIndia,spellChecker,spellChecker2,textEditor,javaCollection,logging,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor]; root of factory hierarchy
+Invoking destroy method on bean 'helloIndia': public void com.core.HelloIndia.destroy()
+Retrieved dependent beans for bean '(inner bean)#18c5069b': [org.springframework.aop.aspectj.AspectJPointcutAdvisor#3]
+Retrieved dependent beans for bean '(inner bean)#68ad99fe': [(inner bean)#18c5069b]
+Retrieved dependent beans for bean '(inner bean)#6955cb39': [org.springframework.aop.aspectj.AspectJPointcutAdvisor#2]
+Retrieved dependent beans for bean '(inner bean)#5f7b97da': [(inner bean)#6955cb39]
+Retrieved dependent beans for bean '(inner bean)#5e01a982': [org.springframework.aop.aspectj.AspectJPointcutAdvisor#1]
+Retrieved dependent beans for bean '(inner bean)#23d1e5d0': [(inner bean)#5e01a982]
+Retrieved dependent beans for bean '(inner bean)#52c3cb31': [org.springframework.aop.aspectj.AspectJPointcutAdvisor#0]
+Retrieved dependent beans for bean '(inner bean)#6d025197': [(inner bean)#52c3cb31]

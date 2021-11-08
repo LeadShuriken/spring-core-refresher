@@ -1,5 +1,6 @@
-package com.tutorialspoint;
+package com.core;
 
+import org.apache.log4j.Logger;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -10,11 +11,13 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Logging {
 
+    static Logger log = Logger.getLogger(Logging.class.getName());
+
     /**
      * Following is the definition for a pointcut to select all the methods
      * available. So advice will be called for all the methods.
      */
-    @Pointcut("execution(* com.tutorialspoint.HelloWorld.*(..))")
+    @Pointcut("execution(* com.core.HelloWorld.*(..))")
     private void selectAll() {
     }
 
@@ -24,7 +27,7 @@ public class Logging {
      */
     @Before("selectAll()")
     public void beforeAdvice() {
-        System.out.println("Logging: Going to setup HelloWorld.");
+        log.info("Logging: Going to setup HelloWorld.");
     }
 
     /**
@@ -33,7 +36,7 @@ public class Logging {
      */
     @After("selectAll()")
     public void afterAdvice() {
-        System.out.println("Logging: HelloWorld has been setup.");
+        log.info("Logging: HelloWorld has been setup.");
     }
 
     /**
@@ -41,7 +44,7 @@ public class Logging {
      */
     @AfterReturning(pointcut = "selectAll()", returning = "retVal")
     public void afterReturningAdvice(Object retVal) {
-        System.out.println("Logging: HelloWorld saying " + retVal.toString());
+        log.info("Logging: HelloWorld saying " + retVal.toString());
     }
 
     /**
@@ -50,6 +53,6 @@ public class Logging {
      */
     @AfterThrowing(pointcut = "selectAll()", throwing = "ex")
     public void AfterThrowingAdvice(IllegalArgumentException ex) {
-        System.out.println("Logging: There has been an exception: " + ex.toString());
+        log.info("Logging: There has been an exception: " + ex.toString());
     }
 }

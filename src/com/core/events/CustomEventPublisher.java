@@ -1,4 +1,4 @@
-package com.tutorialspoint;
+package com.core.events;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;

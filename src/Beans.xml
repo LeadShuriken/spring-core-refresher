@@ -17,14 +17,14 @@
     <!-- 
         default-init-method = "init" 
         default-destroy-method = "destroy"  -->
-    <!-- <bean class = "com.tutorialspoint.InitHelloWorld" /> -->
+    <!-- <bean class = "com.core.InitHelloWorld" /> -->
 
     <context:annotation-config/>
     <aop:aspectj-autoproxy/>
 
     <!-- Definition for HelloWorldJDBCTemplate bean -->
     <bean id = "helloWorldJDBCTemplate" 
-      class = "com.tutorialspoint.HelloWorldJDBCTemplate">
+      class = "com.core.HelloWorldJDBCTemplate">
         <property name = "dataSource" ref = "dataSource" />
         <property name = "transactionManager" ref = "transactionManager" />
     </bean>
@@ -52,14 +52,14 @@
 
     <aop:config proxy-target-class="true">
         <aop:pointcut id = "worldDaoOpp" 
-         expression = "execution(* com.tutorialspoint.HelloWorldJDBCTemplate.createDeclTrans(..))"/>
+         expression = "execution(* com.core.HelloWorldJDBCTemplate.createDeclTrans(..))"/>
         <aop:advisor advice-ref = "txAdvice" pointcut-ref = "worldDaoOpp"/>
     </aop:config>
 
     <aop:config>
         <aop:aspect id = "log" ref = "logging">
             <aop:pointcut id = "selectAll" 
-            expression = "execution(* com.tutorialspoint.HelloWorld.*(..))"/>
+            expression = "execution(* com.core.HelloWorld.*(..))"/>
 
             <aop:before pointcut-ref = "selectAll" method = "beforeAdvice"/>
             <aop:after pointcut-ref = "selectAll" method = "afterAdvice"/>
@@ -71,44 +71,44 @@
         </aop:aspect>
     </aop:config>
 
-    <!-- <bean id = "cStartEventHandler" class = "com.tutorialspoint.ContextEvent"/> -->
-    <!-- <bean id = "cStopEventHandler" class = "com.tutorialspoint.ContextEvent"/> -->
-    <!-- <bean id = "cRexEventHandler" class = "com.tutorialspoint.ContextEvent"/> -->
-    <bean id = "cCloseEventHandler" class = "com.tutorialspoint.ContextEvent"/>
+    <!-- <bean id = "cStartEventHandler" class = "com.core.ContextEvent"/> -->
+    <!-- <bean id = "cStopEventHandler" class = "com.core.ContextEvent"/> -->
+    <!-- <bean id = "cRexEventHandler" class = "com.core.ContextEvent"/> -->
+    <bean id = "cCloseEventHandler" class = "com.core.ContextEvent"/>
 
-    <!-- <bean id = "customEventHandler" class = "com.tutorialspoint.CustomEventHandler"/>
-    <bean id = "customEventPublisher" class = "com.tutorialspoint.CustomEventPublisher"/> -->
+    <!-- <bean id = "customEventHandler" class = "com.core.CustomEventHandler"/>
+    <bean id = "customEventPublisher" class = "com.core.CustomEventPublisher"/> -->
 
     <bean id = "beanTeamplate" abstract = "true">
         <property name = "message1" value = "Hello World!"/>
         <property name = "message2" value = "Hello Second World!"/>
     </bean>
 
-    <bean id = "helloWorld" class = "com.tutorialspoint.HelloWorld" parent = "beanTeamplate"/>
+    <bean id = "helloWorld" class = "com.core.HelloWorld" parent = "beanTeamplate"/>
 
-    <bean id = "helloIndia" class = "com.tutorialspoint.HelloIndia" parent = "beanTeamplate">
+    <bean id = "helloIndia" class = "com.core.HelloIndia" parent = "beanTeamplate">
         <property name = "message1" value = "Hello India!"/>
         <property name = "message3" value = "Namaste India!"/>
     </bean>
 
-    <bean id = "spellChecker" class = "com.tutorialspoint.SpellChecker">
+    <bean id = "spellChecker" class = "com.core.SpellChecker">
         <property name = "checkerName" value = "Spell Checker 1"/>
     </bean>
-    <bean id = "spellChecker2" class = "com.tutorialspoint.SpellChecker">
+    <bean id = "spellChecker2" class = "com.core.SpellChecker">
         <property name = "checkerName" value = "Spell Checker 2"/>
     </bean>
 
-    <!-- <bean id = "textEditor" class = "com.tutorialspoint.TextEditor" autowire = "byName"/>
-    <bean id = "textEditor" class = "com.tutorialspoint.TextEditor" autowire = "byType"/>
-    <bean id = "textEditor" class = "com.tutorialspoint.TextEditor" autowire = "autodetect"/> -->
+    <!-- <bean id = "textEditor" class = "com.core.TextEditor" autowire = "byName"/>
+    <bean id = "textEditor" class = "com.core.TextEditor" autowire = "byType"/>
+    <bean id = "textEditor" class = "com.core.TextEditor" autowire = "autodetect"/> -->
 
-    <bean id = "textEditor" class = "com.tutorialspoint.TextEditor">
+    <bean id = "textEditor" class = "com.core.TextEditor">
         <!-- <property name = "spellChecker">
             <ref bean = "spellChecker"/>
         </property> -->
     </bean>
 
-    <bean id = "javaCollection" class = "com.tutorialspoint.JavaCollection">
+    <bean id = "javaCollection" class = "com.core.JavaCollection">
 
         <!-- results in a setAddressList(java.util.List) call -->
         <property name = "addressList">
@@ -175,6 +175,6 @@
         </property>
     </bean>
 
-    <bean id = "logging" class = "com.tutorialspoint.Logging"/>
+    <bean id = "logging" class = "com.core.Logging"/>
 
 </beans>

@@ -1,27 +1,37 @@
-package com.tutorialspoint;
+package com.core;
 
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.List;
 
+import com.core.dao.HelloWorldDAO;
+import com.core.events.ContextEvent;
+import com.core.events.CustomEventHandler;
+import com.core.events.CustomEventPublisher;
+import com.core.pojo.HelloIndia;
+import com.core.pojo.HelloWorld;
+import com.core.pojo.JavaCollection;
+import com.core.pojo.LittleHelper;
+import com.core.pojo.TextEditor;
+
+import org.apache.log4j.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
 
+    static Logger log = Logger.getLogger(MainApp.class.getName());
+
     private static void execute(Connection conn, String st) {
         try (Statement statement = conn.createStatement();) {
             statement.execute(st);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
         }
     }
 
-    public static void main(String[] args) {
-
-        AbstractApplicationContext factory = new ClassPathXmlApplicationContext("Beans.xml");
-
+    private static void testJDBC(AbstractApplicationContext factory) {
         HelloWorldDAO helloWorldJDBCTemplate = (HelloWorldDAO) factory.getBean("helloWorldJDBCTemplate");
 
         try (Connection conn = helloWorldJDBCTemplate.getDataSource().getConnection()) {
@@ -37,38 +47,43 @@ public class MainApp {
                             + "BEGIN\n" + " SELECT message1\n" + " INTO out_message1\n"
                             + " FROM HelloWorld where id = in_id;\n" + " END\n");
 
-            System.out.println("------Records Creation--------");
+            log.info("------Records Creation--------");
             helloWorldJDBCTemplate.createCodeTrans("A", "B");
             helloWorldJDBCTemplate.createDeclTrans("C", "D");
 
-            System.out.println("------Listing Multiple Records--------");
+            log.info("------Listing Multiple Records--------");
             List<HelloWorld> worlds = helloWorldJDBCTemplate.listHelloWorlds();
 
             for (HelloWorld record : worlds) {
-                System.out.println(record);
+                log.info(record);
             }
 
-            System.out.println("----Updating Record with ID = 2 -----");
+            log.info("----Updating Record with ID = 2 -----");
             helloWorldJDBCTemplate.update(2, "CHANGED");
 
-            System.out.println("----Listing Record with ID = 2 -----");
-            System.out.println(helloWorldJDBCTemplate.getHelloWorld(2));
+            log.info("----Listing Record with ID = 2 -----");
+            log.info(helloWorldJDBCTemplate.getHelloWorld(2));
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            log.error(e.getMessage());
             // TODO: handle exception
         }
+    }
 
+    public static void main(String[] args) {
+
+        AbstractApplicationContext factory = new ClassPathXmlApplicationContext("Beans.xml");
         // -------------------
-        factory.start();
-        System.out.println();
+        // NEED a MYSQL server running on 3306 with TEST db init
+        // testJDBC(factory);
+        // -------------------
 
+        factory.start();
         HelloWorld objA = (HelloWorld) factory.getBean("helloWorld");
         objA.getMessage1();
         objA.getMessage2();
         try {
             objA.printThrowException();
         } catch (Exception e) {
-            System.out.println();
         }
 
         //
@@ -76,12 +91,10 @@ public class MainApp {
         objB.getMessage1();
         objB.getMessage2();
         objB.getMessage3();
-        System.out.println();
 
         TextEditor te = (TextEditor) factory.getBean("textEditor");
         te.spellCheck();
 
-        System.out.println();
         JavaCollection jc = (JavaCollection) factory.getBean("javaCollection");
 
         jc.getAddressList();
@@ -93,8 +106,6 @@ public class MainApp {
         jc.getAddressMapBean();
 
         jc.getAddressProp();
-
-        System.out.println();
 
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 
@@ -115,8 +126,6 @@ public class MainApp {
         CustomEventPublisher cvp = (CustomEventPublisher) ctx.getBean(CustomEventPublisher.class);
 
         cvp.call();
-
-        System.out.println();
 
         factory.stop();
         factory.registerShutdownHook();

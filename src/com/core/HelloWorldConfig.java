@@ -1,4 +1,6 @@
-package com.tutorialspoint;
+package com.core;
+
+import com.core.pojo.HelloWorld;
 
 import org.springframework.context.annotation.*;
 

@@ -1,2 +1,5 @@
-lib/
+WEB-INF/lib
+WEB-INF/classes
+/lib
 .vscode/
+HelloWeb.war

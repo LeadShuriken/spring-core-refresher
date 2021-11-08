@@ -1,8 +1,8 @@
-package com.tutorialspoint;
+package com.core.pojo;
 
 public class LittleHelper {
 
-    void sayHello() {
+    public void sayHello() {
         System.out.println("Hello from Little Helper");
     }
 }

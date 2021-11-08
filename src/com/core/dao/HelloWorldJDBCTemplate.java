@@ -1,10 +1,13 @@
-package com.tutorialspoint;
+package com.core.dao;
 
 import java.util.List;
 import java.util.Map;
 
 import javax.sql.DataSource;
 
+import com.core.pojo.HelloWorld;
+
+import org.apache.log4j.Logger;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -16,6 +19,9 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 public class HelloWorldJDBCTemplate implements HelloWorldDAO {
+
+    static Logger log = Logger.getLogger(HelloWorldJDBCTemplate.class.getName());
+
     private JdbcTemplate jdbcTemplateObject;
     private DataSource dataSource;
     private SimpleJdbcCall jdbcCall;
@@ -43,9 +49,9 @@ public class HelloWorldJDBCTemplate implements HelloWorldDAO {
             String SQL = "insert into HelloWorld (message1, message2) values (?, ?)";
             jdbcTemplateObject.update(SQL, message1, message2);
             // throw new RuntimeException("simulate Error condition");
-            System.out.println("Created Record Message1 = " + message1 + " Message2 = " + message2);
+            log.info("Created Record Message1 = " + message1 + " Message2 = " + message2);
         } catch (DataAccessException e) {
-            System.out.println("Error in creating record, rolling back");
+            log.error("Error in creating record, rolling back");
             transactionManager.rollback(status);
             throw e;
         }
@@ -57,9 +63,9 @@ public class HelloWorldJDBCTemplate implements HelloWorldDAO {
             jdbcTemplateObject.update(SQL, message1, message2);
 
             // throw new RuntimeException("simulate Error condition");
-            System.out.println("Created Record Message1 = " + message1 + " Message2 = " + message2);
+            log.info("Created Record Message1 = " + message1 + " Message2 = " + message2);
         } catch (DataAccessException e) {
-            System.out.println("Error in creating record, rolling back");
+            log.error("Error in creating record, rolling back");
             throw e;
         }
     }
@@ -84,14 +90,14 @@ public class HelloWorldJDBCTemplate implements HelloWorldDAO {
     public void delete(Integer id) {
         String SQL = "delete from HelloWorld where id = ?";
         jdbcTemplateObject.update(SQL, id);
-        System.out.println("Deleted Record with ID = " + id);
+        log.info("Deleted Record with ID = " + id);
         return;
     }
 
     public void update(Integer id, String message1) {
         String SQL = "update HelloWorld set message1 = ? where id = ?";
         jdbcTemplateObject.update(SQL, message1, id);
-        System.out.println("Updated Record with ID = " + id);
+        log.info("Updated Record with ID = " + id);
         return;
     }
 }
