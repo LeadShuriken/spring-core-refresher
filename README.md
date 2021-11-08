@@ -8,13 +8,13 @@ Spring Core Refresher covering core functionality in tutorials from TutorialsPoi
 
 SPRING-CORE-REF uses a number of open source projects:
 
-    * [JAVA11] - JAVA 11 SDK
-    * [SPRING] - JAVA SPRING FRAMEWORK
-    * [APPACHE-COMMONS] - COMMONS FOR JAVA
-    * [ASPECT-J] - ASPECT EXTENSION FOR JAVA
-    * [SLF4J] - LOGGING FACADE FOR JAVA
-    * [LOG4J] - LOGGING FRAMEWORK FOR JAVA
-    * [MYSQL] - MYSQL DATABASE
+* [JAVA11] - JAVA 11 SDK
+* [SPRING] - JAVA SPRING FRAMEWORK
+* [APPACHE-COMMONS] - COMMONS FOR JAVA
+* [ASPECT-J] - ASPECT EXTENSION FOR JAVA
+* [SLF4J] - LOGGING FACADE FOR JAVA
+* [LOG4J] - LOGGING FRAMEWORK FOR JAVA
+* [MYSQL] - MYSQL DATABASE
 
 [REF]: <https://www.tutorialspoint.com/spring/index.htm>
 [JAVA11]: <https://www.oracle.com/java/technologies/javase-jdk11-downloads.html>
